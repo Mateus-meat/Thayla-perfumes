@@ -7,205 +7,253 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa; /* Fundo cinza claro */
-            color: #333;
-        }
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 00;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-        header {
-            background-color: #e91e63; /* Rosa vibrante */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+/* Estilo para o cabeçalho */
+header {
+    background-color: #fbcee9;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            letter-spacing: 1px;
-        }
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    font-weight: 700;
+    color: #e91e63;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(120deg, #f68ec8, #e91e63);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-        header p {
-            font-size: 1.1rem;
-            margin: 5px 0 0;
-        }
+header h1::before {
+    content: '🌹💄👗'; /* Emojis representando perfumes, maquiagem e roupas */
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.1);
+}
 
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+    color: #666;
+}
 
-        nav a {
-            color: #e91e63;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 600;
-            padding: 10px 20px;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        nav a:hover {
-            border-bottom: 2px solid #e91e63;
-            color: #333;
-        }
+.category-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
 
-        .banner {
-            background-image: url('banner-perfume.jpg'); /* Imagem de banner */
-            background-size: cover;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-            position: relative;
-            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
-        }
+.category-item {
+    background-color: #fff;
+    border: 2px solid #f68ec8;
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+}
 
-        .banner h2 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
+.category-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
 
-        .banner p {
-            font-size: 1.5rem;
-            font-weight: 300;
-        }
+.category-item a {
+    text-decoration: none;
+    color: #e91e63;
+    font-weight: bold;
+    display: block;
+    font-size: 1.1rem;
+}
 
-        .container {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
+.banner {
+    background-image: url('banner-perfume.jpg');
+    background-size: cover;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
 
-        h2 {
-            color: #e91e63;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            position: relative;
-        }
+.banner h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
 
-        h2:after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background-color: #e91e63;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+.banner p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 0;
+}
 
-        .product {
-            display: inline-block;
-            width: 30%;
-            margin: 15px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
+.container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-        .product img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
+.container h2 {
+    color: #e91e63;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
 
-        .product h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
+.container h2:after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #e91e63;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-        .product p {
-            font-size: 1rem;
-            color: #555;
-        }
+.product {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .product strong {
-            font-size: 1.2rem;
-            color: #e91e63;
-        }
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
-        .product:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
+.product h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
 
-        footer {
-            background-color: #e91e63;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
+.product p {
+    font-size: 1.1rem;
+    color: #555;
+}
 
-        /* Estilos do WhatsApp Flutuante */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            transition: all 0.3s;
-        }
+.product strong {
+    font-size: 1.3rem;
+    color: #e91e63;
+}
 
-        .whatsapp-float img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
 
-        .whatsapp-float:hover {
-            box-shadow: 0px 0px 15px 2px #34af23;
-            transform: scale(1.1);
-        }
+footer {
+    background-color: #e91e63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        @media (max-width: 768px) {
-            .product {
-                width: 100%;
-            }
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: all 0.3s;
+}
 
-            .banner {
-                padding: 60px 0;
-            }
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 
-            .banner h2 {
-                font-size: 2rem;
-            }
+.whatsapp-float:hover {
+    box-shadow: 0px 0px 20px 2px #34af23;
+    transform: scale(1.1);
+}
 
-            .banner p {
-                font-size: 1.2rem;
-            }
-        }
+@media (max-width: 768px) {
+    .category-item {
+        width: 100%;
+    }
+
+    .product {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .banner {
+        padding: 80px 20px;
+    }
+
+    .banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.4rem;
+    }
+}
     </style>
 </head>
 <body>
     <header>
-        <h1>Loja da Thayla</h1>
+        <h1>Thayla Perfumes</h1>
         <p>Perfumes, Roupas e Maquiagem</p>
     </header>
 
     <nav>
-        <a href="#home">Início</a>
-        <a href="#perfumes">Perfumes</a>
-        <a href="#calcinha">Roupas Íntimas</a>
-        <a href="#sobre">Sobre Nós</a>
-        <a href="#contato">Contato</a>
+        <ul class="category-grid">
+            <li class="category-item"><a href="#home">Início</a></li>
+            <li class="category-item"><a href="#perfumes">Perfumes</a></li>
+            <li class="category-item"><a href="#calcinha">Roupas Íntimas</a></li>
+            <li class="category-item"><a href="#maquiagem">Maquiagem</a></li>
+        </ul>
     </nav>
 
     <div class="banner" id="home">
@@ -265,37 +313,45 @@
         </div>
 
         <div class="product">
-            <img src="Calcinha2.jpeg" alt="Calcinha de Seda">
+            <img src="Calcinha4.jpeg" alt="Calcinha de Seda">
             <h3>Calcinha de Seda</h3>
             <p>Sensual e suave ao toque.</p>
             <p><strong>R$ 60,00</strong></p>
         </div>
     </div>
 
-<!-- Seção Sobre Nós -->
-<div class="container" id="sobre">
-    <h2>Sobre Nós</h2>
-    <div class="about-section" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
-        <div class="about-text" style="flex: 1; min-width: 300px;">
-            <p style="font-size: 1.2rem; line-height: 1.6; color: #555;">
-                Na <strong>Loja da Thayla</strong>, somos apaixonados por perfumes, roupas e maquiagens que fazem as pessoas se sentirem especiais. Desde nossa fundação, temos como objetivo oferecer produtos de alta qualidade, que combinam elegância, estilo e conforto para o dia a dia.
-            </p>
-            <p style="font-size: 1.2rem; line-height: 1.6; color: #555;">
-                Trabalhamos com as melhores marcas e estamos sempre em busca de novidades que atendam às preferências de nossos clientes. Cada produto é cuidadosamente selecionado para proporcionar uma experiência única de bem-estar e beleza.
-            </p>
+    <!-- Seção de Maquiagem -->
+    <div class="container" id="maquiagem">
+        <h2>Maquiagem em Destaque</h2>
+
+        <div class="product">
+            <img src="maquiagem1.jpg" alt="Base Facial">
+            <h3>Base Facial</h3>
+            <p>Base de alta cobertura para uma pele perfeita.</p>
+            <p><strong>R$ 90,00</strong></p>
         </div>
-        <div class="about-image" style="flex: 1; min-width: 300px;">
-            <img src="sobre-nos.jpg" alt="Sobre nós" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+        <div class="product">
+            <img src="maquiagem2.jpg" alt="Máscara para Cílios">
+            <h3>Máscara para Cílios</h3>
+            <p>Proporciona volume e alongamento.</p>
+            <p><strong>R$ 50,00</strong></p>
+        </div>
+
+        <div class="product">
+            <img src="maquiagem3.jpg" alt="Paleta de Sombras">
+            <h3>Paleta de Sombras</h3>
+            <p>Variedade de cores para criar diferentes looks.</p>
+            <p><strong>R$ 120,00</strong></p>
         </div>
     </div>
-</div>
 
-    <!-- Seção Contato -->
+    <!-- Seção de Contato -->
     <div class="container" id="contato">
         <h2>Contato</h2>
         <p>Entre em contato conosco pelo e-mail: <strong>contato@lojathayla.com</strong></p>
         <p>Telefone: <strong>(11) 99999-9999</strong></p>
-        <p>Visite-nos em: <strong>Rua dos Perfumes, 123 - São Paulo, SP</strong></p>
+      <p>Visite-nos em: <strong>Rua Exemplo, 123 - São Paulo, SP</strong></p>
     </div>
 
     <footer>
@@ -304,8 +360,7 @@
 
     <!-- Ícone do WhatsApp Flutuante -->
     <a href="https://wa.me/5533999632615" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
     </a>
-
 </body>
-</html>
+                </html>
